@@ -1,0 +1,37 @@
+ .product-image {
+    border: 1px solid #d9d9db;
+    padding: 5px;
+    min-height: 10px;
+    width: 6rem;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+ .product-image2 {
+    border: 1px solid #d9d9db;
+    padding: 5px;
+    min-height: 10px;
+    width: 6rem;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+img {
+    border: 0;
+    width: 6rem;
+    height: 6rem;
+}
+.flex-list {
+  display: flex;
+  
+}
+.flex-list2 {
+  display: flex;
+  
+}
+.flex-list2 .product-image2 {
+  flex: auto;
+  margin: 5px;
+}
+.flex-list .product-image {
+  flex: auto;
+  margin: 5px;
+}

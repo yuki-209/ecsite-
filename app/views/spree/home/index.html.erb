@@ -1,12 +1,57 @@
+<%= stylesheet_link_tag    'home' %>
 <% content_for :sidebar do %>
   <div data-hook="homepage_sidebar_navigation">
     <%= render partial: 'spree/shared/taxonomies' %>
   </div>
 <% end %>
 
+
+<div class="flex-list">
+    <div class="product-image">
+       <%= image_tag 'u.jpg' %>
+       <p>商品名</p>
+       <p>100円</p>
+    </div>
+    
+        <div class="product-image">
+       <%= image_tag 'u.jpg' %>
+       <p>商品名</p>
+       <p>100円</p>
+    </div>
+    
+        <div class="product-image">
+       <%= image_tag 'u.jpg' %>
+       <p>商品名</p>
+       <p>100円</p>
+    </div>
+</div>
+
+
+<div class="flex-list2">
+    <div class="product-image2">
+       <%= image_tag 'u.jpg' %>
+       <p>商品名</p>
+       <p>100円</p>
+    </div>
+    
+        <div class="product-image2">
+       <%= image_tag 'u.jpg' %>
+       <p>商品名</p>
+       <p>100円</p>
+    </div>
+    
+        <div class="product-image2">
+       <%= image_tag 'u.jpg' %>
+       <p>商品名</p>
+       <p>100円</p>
+    </div>
+</div>
+    
 <div data-hook="homepage_products">
   <% cache(cache_key_for_products) do %>
     <%= render partial: 'spree/shared/products', locals: { products: @products } %>
   <% end %>
+  
+  
 </div>
 

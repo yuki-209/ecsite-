@@ -1,0 +1,351 @@
+current directory: /home/ubuntu/solidus-ec-site/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.2/ext/nio4r
+/usr/local/rbenv/versions/2.7.0/bin/ruby -I /usr/local/rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20200904-961-1ruqxxp.rb extconf.rb
+checking for unistd.h... yes
+checking for linux/aio_abi.h... yes
+checking for sys/select.h... yes
+checking for port_event_t in poll.h... no
+checking for sys/epoll.h... yes
+checking for sys/event.h... no
+checking for port_event_t in port.h... no
+checking for sys/resource.h... yes
+creating Makefile
+
+current directory: /home/ubuntu/solidus-ec-site/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.2/ext/nio4r
+make "DESTDIR=" clean
+
+current directory: /home/ubuntu/solidus-ec-site/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.2/ext/nio4r
+make "DESTDIR="
+compiling bytebuffer.c
+compiling monitor.c
+monitor.c:182:40: warning: implicit conversion loses integer precision: 'VALUE' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+    NIO_Monitor_update_interests(self, interest);
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~       ^~~~~~~~
+monitor.c:192:40: warning: implicit conversion loses integer precision: 'VALUE' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+    NIO_Monitor_update_interests(self, interest);
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~       ^~~~~~~~
+2 warnings generated.
+compiling nio4r_ext.c
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:511:48: warning: '/*' within block comment [-Wcomment]
+/*#define MIN_INTERVAL  0.00000095367431640625 /* 1/2**20, good till 2200 */
+                                               ^
+./../libev/ev.c:1096:26: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
+  return ecb_popcount32 (x) + ecb_popcount32 (x >> 32);
+         ~~~~~~~~~~~~~~~~^~
+./../libev/ev.c:958:49: note: expanded from macro 'ecb_popcount32'
+  #define ecb_popcount32(x) __builtin_popcount (x)
+                            ~~~~~~~~~~~~~~~~~~  ^
+./../libev/ev.c:1302:13: warning: comparison of integers of different signs: 'unsigned int' and 'int' [-Wsign-compare]
+      if (e < (14 - 24)) /* might not be sharp, but is good enough */
+          ~ ^  ~~~~~~~
+./../libev/ev.c:1867:31: warning: 'extern' variable has an initializer [-Wextern-initializer]
+  EV_API_DECL struct ev_loop *ev_default_loop_ptr = 0; /* needs to be initialised to make it a definition despite extern */
+                              ^
+./../libev/ev.c:1978:19: warning: comparison of integers of different signs: 'int' and 'unsigned long' [-Wsign-compare]
+  if (elem * ncur > MALLOC_ROUND - sizeof (void *) * 4)
+      ~~~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev.c:2329:18: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      k = minpos - heap;
+        ~ ~~~~~~~^~~~~~
+In file included from nio4r_ext.c:7:
+In file included from ./../libev/ev.c:2745:
+./../libev/ev_linuxaio.c:176:10: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  return ev_syscall2 (SYS_io_setup, nr_events, ctx_idp);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:159:52: note: expanded from macro 'ev_syscall2'
+  #define ev_syscall2(nr,arg1,arg2)                ev_syscall (nr, 2, arg1, arg2,    0,    0,    0)
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:150:17: note: expanded from macro 'ev_syscall'
+        errno = -res;                                                  \
+              ~ ^~~~
+./../libev/ev_linuxaio.c:176:10: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  return ev_syscall2 (SYS_io_setup, nr_events, ctx_idp);
+  ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:159:52: note: expanded from macro 'ev_syscall2'
+  #define ev_syscall2(nr,arg1,arg2)                ev_syscall (nr, 2, arg1, arg2,    0,    0,    0)
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:133:5: note: expanded from macro 'ev_syscall'
+    ({                                                                 \
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:176:10: warning: variable 'r3' is uninitialized when used here [-Wuninitialized]
+  return ev_syscall2 (SYS_io_setup, nr_events, ctx_idp);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:159:52: note: expanded from macro 'ev_syscall2'
+  #define ev_syscall2(nr,arg1,arg2)                ev_syscall (nr, 2, arg1, arg2,    0,    0,    0)
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:148:48: note: expanded from macro 'ev_syscall'
+          : "0" (nr), "r" (r1), "r" (r2), "r" (r3), "r" (r4), "r" (r5) \
+                                               ^~
+./../libev/ev_linuxaio.c:176:10: note: variable 'r3' is declared here
+./../libev/ev_linuxaio.c:159:52: note: expanded from macro 'ev_syscall2'
+  #define ev_syscall2(nr,arg1,arg2)                ev_syscall (nr, 2, arg1, arg2,    0,    0,    0)
+                                                   ^
+./../libev/ev_linuxaio.c:137:9: note: expanded from macro 'ev_syscall'
+        register unsigned long r3 __asm__ ("rdx");                     \
+        ^
+./../libev/ev_linuxaio.c:176:10: warning: variable 'r4' is uninitialized when used here [-Wuninitialized]
+  return ev_syscall2 (SYS_io_setup, nr_events, ctx_idp);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:159:52: note: expanded from macro 'ev_syscall2'
+  #define ev_syscall2(nr,arg1,arg2)                ev_syscall (nr, 2, arg1, arg2,    0,    0,    0)
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:148:58: note: expanded from macro 'ev_syscall'
+          : "0" (nr), "r" (r1), "r" (r2), "r" (r3), "r" (r4), "r" (r5) \
+                                                         ^~
+./../libev/ev_linuxaio.c:176:10: note: variable 'r4' is declared here
+./../libev/ev_linuxaio.c:159:52: note: expanded from macro 'ev_syscall2'
+  #define ev_syscall2(nr,arg1,arg2)                ev_syscall (nr, 2, arg1, arg2,    0,    0,    0)
+                                                   ^
+./../libev/ev_linuxaio.c:136:9: note: expanded from macro 'ev_syscall'
+        register unsigned long r4 __asm__ ("r10");                     \
+        ^
+./../libev/ev_linuxaio.c:176:10: warning: variable 'r5' is uninitialized when used here [-Wuninitialized]
+  return ev_syscall2 (SYS_io_setup, nr_events, ctx_idp);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:159:52: note: expanded from macro 'ev_syscall2'
+  #define ev_syscall2(nr,arg1,arg2)                ev_syscall (nr, 2, arg1, arg2,    0,    0,    0)
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:148:68: note: expanded from macro 'ev_syscall'
+          : "0" (nr), "r" (r1), "r" (r2), "r" (r3), "r" (r4), "r" (r5) \
+                                                                   ^~
+./../libev/ev_linuxaio.c:176:10: note: variable 'r5' is declared here
+./../libev/ev_linuxaio.c:159:52: note: expanded from macro 'ev_syscall2'
+  #define ev_syscall2(nr,arg1,arg2)                ev_syscall (nr, 2, arg1, arg2,    0,    0,    0)
+                                                   ^
+./../libev/ev_linuxaio.c:135:9: note: expanded from macro 'ev_syscall'
+        register unsigned long r5 __asm__ ("r8" );                     \
+        ^
+./../libev/ev_linuxaio.c:183:10: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  return ev_syscall1 (SYS_io_destroy, ctx_id);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:158:52: note: expanded from macro 'ev_syscall1'
+  #define ev_syscall1(nr,arg1)                     ev_syscall (nr, 1, arg1,    0,    0,    0,    0)
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:150:17: note: expanded from macro 'ev_syscall'
+        errno = -res;                                                  \
+              ~ ^~~~
+./../libev/ev_linuxaio.c:183:10: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  return ev_syscall1 (SYS_io_destroy, ctx_id);
+  ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:158:52: note: expanded from macro 'ev_syscall1'
+  #define ev_syscall1(nr,arg1)                     ev_syscall (nr, 1, arg1,    0,    0,    0,    0)
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:133:5: note: expanded from macro 'ev_syscall'
+    ({                                                                 \
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:183:10: warning: variable 'r2' is uninitialized when used here [-Wuninitialized]
+  return ev_syscall1 (SYS_io_destroy, ctx_id);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:158:52: note: expanded from macro 'ev_syscall1'
+  #define ev_syscall1(nr,arg1)                     ev_syscall (nr, 1, arg1,    0,    0,    0,    0)
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:148:38: note: expanded from macro 'ev_syscall'
+          : "0" (nr), "r" (r1), "r" (r2), "r" (r3), "r" (r4), "r" (r5) \
+                                     ^~
+./../libev/ev_linuxaio.c:183:10: note: variable 'r2' is declared here
+./../libev/ev_linuxaio.c:158:52: note: expanded from macro 'ev_syscall1'
+  #define ev_syscall1(nr,arg1)                     ev_syscall (nr, 1, arg1,    0,    0,    0,    0)
+                                                   ^
+./../libev/ev_linuxaio.c:138:9: note: expanded from macro 'ev_syscall'
+        register unsigned long r2 __asm__ ("rsi");                     \
+        ^
+./../libev/ev_linuxaio.c:183:10: warning: variable 'r3' is uninitialized when used here [-Wuninitialized]
+  return ev_syscall1 (SYS_io_destroy, ctx_id);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:158:52: note: expanded from macro 'ev_syscall1'
+  #define ev_syscall1(nr,arg1)                     ev_syscall (nr, 1, arg1,    0,    0,    0,    0)
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:148:48: note: expanded from macro 'ev_syscall'
+          : "0" (nr), "r" (r1), "r" (r2), "r" (r3), "r" (r4), "r" (r5) \
+                                               ^~
+./../libev/ev_linuxaio.c:183:10: note: variable 'r3' is declared here
+./../libev/ev_linuxaio.c:158:52: note: expanded from macro 'ev_syscall1'
+  #define ev_syscall1(nr,arg1)                     ev_syscall (nr, 1, arg1,    0,    0,    0,    0)
+                                                   ^
+./../libev/ev_linuxaio.c:137:9: note: expanded from macro 'ev_syscall'
+        register unsigned long r3 __asm__ ("rdx");                     \
+        ^
+./../libev/ev_linuxaio.c:183:10: warning: variable 'r4' is uninitialized when used here [-Wuninitialized]
+  return ev_syscall1 (SYS_io_destroy, ctx_id);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:158:52: note: expanded from macro 'ev_syscall1'
+  #define ev_syscall1(nr,arg1)                     ev_syscall (nr, 1, arg1,    0,    0,    0,    0)
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:148:58: note: expanded from macro 'ev_syscall'
+          : "0" (nr), "r" (r1), "r" (r2), "r" (r3), "r" (r4), "r" (r5) \
+                                                         ^~
+./../libev/ev_linuxaio.c:183:10: note: variable 'r4' is declared here
+./../libev/ev_linuxaio.c:158:52: note: expanded from macro 'ev_syscall1'
+  #define ev_syscall1(nr,arg1)                     ev_syscall (nr, 1, arg1,    0,    0,    0,    0)
+                                                   ^
+./../libev/ev_linuxaio.c:136:9: note: expanded from macro 'ev_syscall'
+        register unsigned long r4 __asm__ ("r10");                     \
+        ^
+./../libev/ev_linuxaio.c:183:10: warning: variable 'r5' is uninitialized when used here [-Wuninitialized]
+  return ev_syscall1 (SYS_io_destroy, ctx_id);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:158:52: note: expanded from macro 'ev_syscall1'
+  #define ev_syscall1(nr,arg1)                     ev_syscall (nr, 1, arg1,    0,    0,    0,    0)
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:148:68: note: expanded from macro 'ev_syscall'
+          : "0" (nr), "r" (r1), "r" (r2), "r" (r3), "r" (r4), "r" (r5) \
+                                                                   ^~
+./../libev/ev_linuxaio.c:183:10: note: variable 'r5' is declared here
+./../libev/ev_linuxaio.c:158:52: note: expanded from macro 'ev_syscall1'
+  #define ev_syscall1(nr,arg1)                     ev_syscall (nr, 1, arg1,    0,    0,    0,    0)
+                                                   ^
+./../libev/ev_linuxaio.c:135:9: note: expanded from macro 'ev_syscall'
+        register unsigned long r5 __asm__ ("r8" );                     \
+        ^
+./../libev/ev_linuxaio.c:190:10: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  return ev_syscall3 (SYS_io_submit, ctx_id, nr, cbp);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:160:52: note: expanded from macro 'ev_syscall3'
+  #define ev_syscall3(nr,arg1,arg2,arg3)           ev_syscall (nr, 3, arg1, arg2, arg3,    0,    0)
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:150:17: note: expanded from macro 'ev_syscall'
+        errno = -res;                                                  \
+              ~ ^~~~
+./../libev/ev_linuxaio.c:190:10: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  return ev_syscall3 (SYS_io_submit, ctx_id, nr, cbp);
+  ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:160:52: note: expanded from macro 'ev_syscall3'
+  #define ev_syscall3(nr,arg1,arg2,arg3)           ev_syscall (nr, 3, arg1, arg2, arg3,    0,    0)
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:133:5: note: expanded from macro 'ev_syscall'
+    ({                                                                 \
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:190:10: warning: variable 'r4' is uninitialized when used here [-Wuninitialized]
+  return ev_syscall3 (SYS_io_submit, ctx_id, nr, cbp);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:160:52: note: expanded from macro 'ev_syscall3'
+  #define ev_syscall3(nr,arg1,arg2,arg3)           ev_syscall (nr, 3, arg1, arg2, arg3,    0,    0)
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:148:58: note: expanded from macro 'ev_syscall'
+          : "0" (nr), "r" (r1), "r" (r2), "r" (r3), "r" (r4), "r" (r5) \
+                                                         ^~
+./../libev/ev_linuxaio.c:190:10: note: variable 'r4' is declared here
+./../libev/ev_linuxaio.c:160:52: note: expanded from macro 'ev_syscall3'
+  #define ev_syscall3(nr,arg1,arg2,arg3)           ev_syscall (nr, 3, arg1, arg2, arg3,    0,    0)
+                                                   ^
+./../libev/ev_linuxaio.c:136:9: note: expanded from macro 'ev_syscall'
+        register unsigned long r4 __asm__ ("r10");                     \
+        ^
+./../libev/ev_linuxaio.c:190:10: warning: variable 'r5' is uninitialized when used here [-Wuninitialized]
+  return ev_syscall3 (SYS_io_submit, ctx_id, nr, cbp);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:160:52: note: expanded from macro 'ev_syscall3'
+  #define ev_syscall3(nr,arg1,arg2,arg3)           ev_syscall (nr, 3, arg1, arg2, arg3,    0,    0)
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:148:68: note: expanded from macro 'ev_syscall'
+          : "0" (nr), "r" (r1), "r" (r2), "r" (r3), "r" (r4), "r" (r5) \
+                                                                   ^~
+./../libev/ev_linuxaio.c:190:10: note: variable 'r5' is declared here
+./../libev/ev_linuxaio.c:160:52: note: expanded from macro 'ev_syscall3'
+  #define ev_syscall3(nr,arg1,arg2,arg3)           ev_syscall (nr, 3, arg1, arg2, arg3,    0,    0)
+                                                   ^
+./../libev/ev_linuxaio.c:135:9: note: expanded from macro 'ev_syscall'
+        register unsigned long r5 __asm__ ("r8" );                     \
+        ^
+./../libev/ev_linuxaio.c:197:10: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  return ev_syscall3 (SYS_io_cancel, ctx_id, cbp, result);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:160:52: note: expanded from macro 'ev_syscall3'
+  #define ev_syscall3(nr,arg1,arg2,arg3)           ev_syscall (nr, 3, arg1, arg2, arg3,    0,    0)
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:150:17: note: expanded from macro 'ev_syscall'
+        errno = -res;                                                  \
+              ~ ^~~~
+./../libev/ev_linuxaio.c:197:10: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  return ev_syscall3 (SYS_io_cancel, ctx_id, cbp, result);
+  ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:160:52: note: expanded from macro 'ev_syscall3'
+  #define ev_syscall3(nr,arg1,arg2,arg3)           ev_syscall (nr, 3, arg1, arg2, arg3,    0,    0)
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:133:5: note: expanded from macro 'ev_syscall'
+    ({                                                                 \
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:197:10: warning: variable 'r4' is uninitialized when used here [-Wuninitialized]
+  return ev_syscall3 (SYS_io_cancel, ctx_id, cbp, result);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:160:52: note: expanded from macro 'ev_syscall3'
+  #define ev_syscall3(nr,arg1,arg2,arg3)           ev_syscall (nr, 3, arg1, arg2, arg3,    0,    0)
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:148:58: note: expanded from macro 'ev_syscall'
+          : "0" (nr), "r" (r1), "r" (r2), "r" (r3), "r" (r4), "r" (r5) \
+                                                         ^~
+./../libev/ev_linuxaio.c:197:10: note: variable 'r4' is declared here
+./../libev/ev_linuxaio.c:160:52: note: expanded from macro 'ev_syscall3'
+  #define ev_syscall3(nr,arg1,arg2,arg3)           ev_syscall (nr, 3, arg1, arg2, arg3,    0,    0)
+                                                   ^
+./../libev/ev_linuxaio.c:136:9: note: expanded from macro 'ev_syscall'
+        register unsigned long r4 __asm__ ("r10");                     \
+        ^
+./../libev/ev_linuxaio.c:197:10: warning: variable 'r5' is uninitialized when used here [-Wuninitialized]
+  return ev_syscall3 (SYS_io_cancel, ctx_id, cbp, result);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:160:52: note: expanded from macro 'ev_syscall3'
+  #define ev_syscall3(nr,arg1,arg2,arg3)           ev_syscall (nr, 3, arg1, arg2, arg3,    0,    0)
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:148:68: note: expanded from macro 'ev_syscall'
+          : "0" (nr), "r" (r1), "r" (r2), "r" (r3), "r" (r4), "r" (r5) \
+                                                                   ^~
+./../libev/ev_linuxaio.c:197:10: note: variable 'r5' is declared here
+./../libev/ev_linuxaio.c:160:52: note: expanded from macro 'ev_syscall3'
+  #define ev_syscall3(nr,arg1,arg2,arg3)           ev_syscall (nr, 3, arg1, arg2, arg3,    0,    0)
+                                                   ^
+./../libev/ev_linuxaio.c:135:9: note: expanded from macro 'ev_syscall'
+        register unsigned long r5 __asm__ ("r8" );                     \
+        ^
+./../libev/ev_linuxaio.c:204:10: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  return ev_syscall5 (SYS_io_getevents, ctx_id, min_nr, nr, events, timeout);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:162:52: note: expanded from macro 'ev_syscall5'
+  #define ev_syscall5(nr,arg1,arg2,arg3,arg4,arg5) ev_syscall (nr, 5, arg1, arg2, arg3, arg4, arg5)
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:150:17: note: expanded from macro 'ev_syscall'
+        errno = -res;                                                  \
+              ~ ^~~~
+./../libev/ev_linuxaio.c:204:10: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  return ev_syscall5 (SYS_io_getevents, ctx_id, min_nr, nr, events, timeout);
+  ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:162:52: note: expanded from macro 'ev_syscall5'
+  #define ev_syscall5(nr,arg1,arg2,arg3,arg4,arg5) ev_syscall (nr, 5, arg1, arg2, arg3, arg4, arg5)
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:133:5: note: expanded from macro 'ev_syscall'
+    ({                                                                 \
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev_linuxaio.c:341:21: warning: implicit conversion loses integer precision: '__u64' (aka 'unsigned long long') to 'int' [-Wshorten-64-to-32]
+      int fd  = ev->data;
+          ~~    ~~~~^~~~
+./../libev/ev_linuxaio.c:342:21: warning: implicit conversion loses integer precision: '__s64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+      int res = ev->res;
+          ~~~   ~~~~^~~
+./../libev/ev_linuxaio.c:514:9: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+        else if (errno == EAGAIN)
+        ^
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:4014:34: warning: '&' within '|' [-Wbitwise-op-parentheses]
+  fd_change (EV_A_ fd, w->events & EV__IOFDSET | EV_ANFD_REIFY);
+                       ~~~~~~~~~~^~~~~~~~~~~~~ ~
+./../libev/ev.c:4014:34: note: place parentheses around the '&' expression to silence this warning
+  fd_change (EV_A_ fd, w->events & EV__IOFDSET | EV_ANFD_REIFY);
+                                 ^
+                       (                      )
+./../libev/ev.c:4517:13: warning: implicit conversion loses integer precision: 'ssize_t' (aka 'long') to 'int' [-Wshorten-64-to-32]
+  int len = read (fs_fd, buf, sizeof (buf));
+      ~~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+32 warnings generated.
+compiling selector.c
+selector.c:286:26: warning: incompatible function pointer types passing 'VALUE (*)(VALUE *)' (aka 'unsigned long (*)(unsigned long *)') to parameter of type 'VALUE (*)(VALUE)' (aka 'unsigned long (*)(unsigned long)') [-Wincompatible-function-pointer-types]
+        return rb_ensure(func, (VALUE)args, NIO_Selector_unlock, self);
+                         ^~~~
+/usr/local/rbenv/versions/2.7.0/include/ruby-2.7.0/ruby/ruby.h:1990:24: note: passing argument to parameter here
+VALUE rb_ensure(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE),VALUE);
+                       ^
+1 warning generated.
+linking shared-object nio4r_ext.so
+
+current directory: /home/ubuntu/solidus-ec-site/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.2/ext/nio4r
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20200904-961-lvcef1

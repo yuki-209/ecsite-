@@ -35,3 +35,189 @@ img {
   flex: auto;
   margin: 5px;
 }
+
+@font-face {
+  font-family: 'MyFont';
+  src: url(font/Neko_no_Mezame.ttf);
+}
+
+body {
+  min-width: 980px;
+  background-color: #fff;
+  color: #464646;
+  font-size: 62.5%;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+#global_header {
+  background-image: url("header_background.png");
+  background-repeat: repeat-x;
+}
+
+header {
+  color: rgba(200, 200, 200, 0.8);
+  font-size: 10px;
+}
+
+.header_inner {
+  position: relative;
+  width: 960px;
+  height: 65px;
+  margin: auto;
+}
+
+.header_logo {
+  float: left;
+}
+
+.header_nav {
+  padding-top: 25px;
+
+  ul {
+    float: right;
+
+    li {
+      display: inline-block;
+      margin-right: 13px;
+
+      &::before {
+        content: "▶";
+      }
+    }
+  }
+}
+
+header a {
+  text-decoration: none;
+  color: rgba(200, 200, 200, 0.8);
+}
+
+#global_nav {
+  position: relative;
+  width: 960px;
+  height: 0;
+  z-index: 1000;
+  margin: auto;
+
+  ul {
+    z-index: 1;
+    position: absolute;
+    top: -20px;
+    right: -1px;
+    list-style-type: none;
+
+    li {
+      display: inline-block;
+
+      a {
+        position: relative;
+      }
+    }
+  }
+}
+
+.dropdown {
+  z-index: 1;
+  display: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 65px;
+  list-style-type: none;
+  color: #fff;
+
+  ul {
+    background-color: #441e08;
+    padding: 0;
+
+    li {
+      font-size: 1.2em;
+      padding: 4px 4px 4px 16px;
+
+      h3 {
+        margin: 0;
+        padding: 4px;
+      }
+
+      h4 {
+        margin: 0;
+        padding: 4px 4px 4px 8px;
+      }
+    }
+  }
+
+  .categoly {
+    text-indent: 1em;
+  }
+
+  ul {
+    .padd {
+      padding-left: 6px;
+    }
+
+    .padd2 {
+      padding-left: 1.5em;
+    }
+
+    li a {
+      color: #fff;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+#global_nav ul li:hover .dropdown {
+  display: block;
+  width: 160px;
+}
+
+.font1 {
+  font-family: MyFont;
+  letter-spacing: 3px;
+}
+
+#global_footer {
+  margin-bottom: 30px;
+}
+
+footer {
+  background-color: #f4f4f4;
+  font-size: 12px;
+}
+
+.footer_inner {
+  position: relative;
+  width: 960px;
+  margin: auto;
+}
+
+.footer_nav ul li {
+  display: inline-block;
+  padding: 0 14px 0 10px;
+
+  &::before {
+    content: "▶";
+  }
+
+  &:last-child::before {
+    content: none;
+  }
+}
+
+footer a {
+  color: #464646;
+  text-decoration: none;
+}
+
+.production {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

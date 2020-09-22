@@ -1,5 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <%= stylesheet_link_tag    'home' %>
+    <meta name=descripstion content="">
+    <title>There are potions and weapons ～ポーション有リマス～</title>
+  </head> 
+  <body>
+    <header id="global_header">
+      <div class="header_inner">
+        <div class="header_logo">
+          <h1>
+            <a href="home.html">
+             
+            </a>
+          </h1>
+        </div>
+        <div class="header_nav">
+          <ul>
+            <li><a href="index.html">トップページ</a></li>
+            <li><a href="sitemap/index.html">サイトマップ</a></li>
+            <li><a href="contact/index.html">お問い合わせ先</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <nav id="global_nav">
+      <ul class="nav">
+        <li>
+          <a href="">
+              <%= image_tag 'catalog.png',:alt => '商品カタログ' ,:size =>'160x45' %>
+          </a>
+          <div class="dropdown">
+                <ul>
+                  <li><h3><a href="catalog/index.html">商品カタログ</a></h3></li>
+                  <li><h4><a href="catalog/wepons/index.html">武器 <span class="font1">-wepons-</span></a></h4></li>
+                  <li class="categoly"><a href="catalog/wepons/sword/index.html">剣 <span class="font1">-sword-</span></a></li>
+                  <li class="categoly"><a href="catalog/wepons/rance/index.html">槍 <span class="font1">-rance-</span></a></li>
+                  <li class="categoly"><a href="catalog/wepons/axe/index.html">斧 <span class="font1">-axe-</span></a></li>
+                  <li class="categoly"><a href="catalog/wepons/hammer/index.html">槌 <span class="font1">-hammer-</span></a></li>
+                  <li class="categoly"><a href="catalog/wepons/wand/index.html">杖 <span class="font1">-wand-</span></a></li>
+                  <li class="categoly"><a href="catalog/wepons/bow/index.html">弓 <span class="font1">-bow-</span></a></li>
+                  <li><h4><a href="catalog/armor/index.html">防具 <span class="font1">-armor-</span></a></h4></li>
+                  <li><h4><a href="catalog/other/index.html">その他 <span class="font1">-other-</span></a></h4></li>
+                </ul>
+          </div>
+        </li>
+        <li>
+          <a href="">
+              <%= image_tag 'wepons.png',:alt => 'ウエポン・ガイド' ,:size =>'160x45' %>
+          </a>
+          <div class="dropdown">
+            <ul>
+              <li class="padd"><h4><a href="guide.html">ウエポンガイド</a></h4></li>
+              <li class="categoly padd"><a href="guide/rookie/index.html">かけだし冒険者<br><span class="font1 padd2">-rookie guide-</span></a></li>
+              <li class="categoly padd"><a href="guide/handling/index.html">武器の取り扱い<span class="font1 padd2">-handling-</span></a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="">
+              <%= image_tag 'support.png',:alt => 'ユーザーサポート' ,:size =>'160x45' %>
+          </a>
+          <div class="dropdown">
+            <ul>
+              <li class="padd"><h4><a href="support.html">ユーザーサポート</a></h4></li>
+              <li class="categoly padd"><a href="support/trouble/index.html">トラブル<br><span class="font1 padd2">-trouble-</span></a></li>
+              <li class="categoly padd"><a href="support/repair/index.html">修理のご案内<span class="font1 padd2">-repair-</span></a></li>
+              <li class="categoly padd"><a href="support/qa/index.html">よくあるご質問<span class="font1 padd2">-Q&A-</span></a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <footer id="global_footer">
+      <div class="footer_inner">
+        <div class="footer_nav">
+          <ul>
+            <li><a href="catalog/index.html">商品カタログ</a></li>
+            <li><a href="guide/index.html">ウエポン・ガイド</a></li>
+            <li><a href="support/index.html">ユーザーサポート</a></li>
+            <li><a href="terms/index.html">ご利用規約</a></li>
+            <li><a href="pp/index.html">プライベートポリシー</a></li>
+            <li><a href="sitemap/index.html">サイトマップ</a></li>
+            <li class="production"><small>CS事業部 第3システム部</small></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
 <header id="header" class="row" data-hook>
-  <figure id="logo" class="columns six" data-hook><%= image_tag 'u.jpg' %></figure>
   <%= render partial: 'spree/shared/nav_bar' %>
   <%= render partial: 'spree/shared/main_nav_bar' if store_menu? %>
 </header>
+
+

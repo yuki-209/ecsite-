@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'contact/index'
   get 'policy/index'
   get 'kiyaku/index'
   get 'guide/index'

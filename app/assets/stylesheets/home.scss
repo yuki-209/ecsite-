@@ -45,13 +45,17 @@ body {
   min-width: 980px;
   background-color: #fff;
   color: #464646;
-  font-size: 62.5%;
+  font-size: 100%;
   font-weight: 300;
   margin: 0;
   padding: 0;
   border: 0;
 }
-
+@media only screen and (max-width: 900px){
+.container {
+    width:100%;
+}
+}
 #global_header {
   background-image: url("header_background.png");
   background-repeat: repeat-x;

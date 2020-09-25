@@ -18,9 +18,9 @@
         </div>
         <div class="header_nav">
           <ul>
-            <li><a href="index.html">トップページ</a></li>
-            <li><a href="sitemap/index.html">サイトマップ</a></li>
-            <li><a href="contact/index.html">お問い合わせ先</a></li>
+            <li><%= link_to "トップページ","home/index" %></li>
+            <li><%= link_to "サイトマップ","sitemap/index" %></li>
+            <li><%= link_to "お問い合わせ先","contact/index" %></li>
           </ul>
         </div>
       </div>
@@ -78,13 +78,12 @@
       <div class="footer_inner">
         <div class="footer_nav">
           <ul>
-            <li><a href="catalog/index.html">商品カタログ</a></li>
-            <li><a href="guide/index.html">ウエポン・ガイド</a></li>
-            <li><a href="support/index.html">ユーザーサポート</a></li>
-            <li><a href="terms/index.html">ご利用規約</a></li>
-            <li><a href="pp/index.html">プライベートポリシー</a></li>
-            <li><a href="sitemap/index.html">サイトマップ</a></li>
-            <li class="production"><small>CS事業部 第3システム部</small></li>
+      　    <li><%= link_to "商品カタログ","/catalog/index" %></li>
+            <li><%= link_to "ウエポン・ガイド","guide/index" %></li>
+            <li><%= link_to "ユーザーサポート","support/index" %></li>
+            <li><%= link_to "ご利用規約","kiyaku/index" %></li>
+            <li><%= link_to "プライベートポリシー","policy/index" %></li>
+            <li><%= link_to "サイトマップ","sitemap/index" %></li>
           </ul>
         </div>
       </div>

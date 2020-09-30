@@ -6,3 +6,8 @@ Windows上で高速でchocolatey 環境を作る手順
 
 #### https://weapons-app.herokuapp.com/
 本番環境
+
+### 学校の総合実践用のリポジトリ
+
+1年生はhtml/css<br>
+2年生はjavascript/バックエンド/インフラ

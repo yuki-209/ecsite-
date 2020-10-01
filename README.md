@@ -1,25 +1,13 @@
-# README
+#### https://qiita.com/Nakamura-Yasuhiro/private/f15b39dfa0e9f3ca005a
+railsとgitの基礎
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### https://qiita.com/Nakamura-Yasuhiro/private/fb73241f3eec5061fa8e
+Windows上で高速でchocolatey 環境を作る手順
 
-Things you may want to cover:
+#### https://weapons-app.herokuapp.com/
+本番環境
 
-* Ruby version
+### 学校の総合実践用のリポジトリ
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# ecsite-
+1年生はhtml/css<br>
+2年生はjavascript/バックエンド/インフラ

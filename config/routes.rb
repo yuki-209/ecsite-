@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'contact/index'
+  get 'contacts/sended'
+  get 'contacts/new' 
   get 'policy/index'
   get 'kiyaku/index'
   get 'guide/index'
@@ -14,7 +15,7 @@ Rails.application.routes.draw do
   #
   # We ask that you don't use the :as option here, as Solidus relies on it being the default of "spree"
   mount Spree::Core::Engine, at: '/'
-  
+  resources :contacts
   get 'buy/index'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

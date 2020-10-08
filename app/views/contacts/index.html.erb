@@ -1,0 +1,26 @@
+<h1>お問い合わせ一覧</h1>
+
+<% if @contacts.present? %>
+  <table>
+    <thead>
+      <tr>
+        <th>名前</th>
+        <th>メールアドレス</th>
+        <th>ご用件</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @contacts.each do |contact| %>
+        <tr>
+          <td><%= contact.name %></td>
+          <td><%= contact.email %></td>
+          <td><%= link_to contact.request, contact %></td>
+          <td><%= link_to "削除", contact, method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>お問い合わせはありません</p>
+<% end %>

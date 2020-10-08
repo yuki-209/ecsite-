@@ -1,6 +1,7 @@
 <%= stylesheet_link_tag    'home' %>
 
 
+
 <% content_for :sidebar do %>
   <div data-hook="homepage_sidebar_navigation">
     <%= render partial: 'spree/shared/taxonomies' %>
@@ -57,3 +58,4 @@
   
 </div>
 
+<%= render partial: 'template/footer' %>

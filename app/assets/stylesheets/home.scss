@@ -184,6 +184,11 @@ header a {
   }
 }
 
+.wrap {
+  white-space: nowrap;
+}
+
+
 #global_nav ul li:hover .dropdown {
   display: block;
   width: 160px;

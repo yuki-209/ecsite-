@@ -33,7 +33,7 @@
           </a>
           <div class="dropdown">
                 <ul>
-                  <li><h3><a href="catalog/index.html">商品カタログ</a></h3></li>
+                  <li><h3><%= link_to "商品カタログ","/catalog/index" %></h3></li>
                   <li><h4><a href="catalog/wepons/index.html">武器 <span class="font1">-wepons-</span></a></h4></li>
                   <li class="categoly"><a href="catalog/wepons/sword/index.html">剣 <span class="font1">-sword-</span></a></li>
                   <li class="categoly"><a href="catalog/wepons/rance/index.html">槍 <span class="font1">-rance-</span></a></li>
@@ -52,7 +52,7 @@
           </a>
           <div class="dropdown">
             <ul>
-              <li class="padd"><h4><a href="guide.html">ウエポンガイド</a></h4></li>
+              <li class="padd"><h4><%= link_to "ウエポンガイド","/guide/index" %></h4></li>
               <li class="categoly padd"><a href="guide/rookie/index.html">かけだし冒険者<br><span class="font1 padd2">-rookie guide-</span></a></li>
               <li class="categoly padd"><a href="guide/handling/index.html">武器の取り扱い<span class="font1 padd2">-handling-</span></a></li>
             </ul>
@@ -64,10 +64,10 @@
           </a>
           <div class="dropdown">
             <ul>
-              <li class="padd"><h4><a href="support.html">ユーザーサポート</a></h4></li>
-              <li class="categoly padd"><a href="support/trouble/index.html">トラブル<br><span class="font1 padd2">-trouble-</span></a></li>
-              <li class="categoly padd"><a href="support/repair/index.html">修理のご案内<span class="font1 padd2">-repair-</span></a></li>
-              <li class="categoly padd"><a href="support/qa/index.html">よくあるご質問<span class="font1 padd2">-Q&A-</span></a></li>
+              <li class="padd"><h4><%= link_to "ユーザーサポート","/support/index" %></h4></li>
+              <li class="padd"><h4><%= link_to "ご利用規約","/kiyaku/index" %></h4></li>
+              <li class="padd"><h4 class="wrap"><%= link_to "プライベートポリシー","/policy/index" %></h4></li>
+              <li class="padd"><h4><%= link_to "サイトマップ","/sitemap/index" %></h4></li>
             </ul>
           </div>
         </li>

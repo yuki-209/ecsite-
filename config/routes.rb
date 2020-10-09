@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   get 'contacts/sended'
   get 'contacts/new' 
+  
+  get 'contact/index'
+  get 'sitemap/index'
   get 'policy/index'
   get 'kiyaku/index'
   get 'guide/index'

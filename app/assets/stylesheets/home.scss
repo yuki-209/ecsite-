@@ -14,17 +14,22 @@
     background-color: #FFFFFF;
     text-align: center;
 }
-img {
+
+.flex-list {
+  display: flex;
+  img {
     border: 0;
     width: 6rem;
     height: 6rem;
 }
-.flex-list {
-  display: flex;
-  
 }
 .flex-list2 {
   display: flex;
+  img {
+    border: 0;
+    width: 6rem;
+    height: 6rem;
+}
   
 }
 .flex-list2 .product-image2 {
@@ -38,20 +43,24 @@ img {
 
 @font-face {
   font-family: 'MyFont';
-  src: url(font/Neko_no_Mezame.ttf);
+  src: url(assets/Neko_no_Mezame.ttf);
 }
 
 body {
   min-width: 980px;
   background-color: #fff;
   color: #464646;
-  font-size: 62.5%;
+  font-size: 100%;
   font-weight: 300;
   margin: 0;
   padding: 0;
   border: 0;
 }
-
+@media only screen and (max-width: 900px){
+.container {
+    width:100%;
+}
+}
 #global_header {
   background-image: url("header_background.png");
   background-repeat: repeat-x;
@@ -134,7 +143,7 @@ header a {
     padding: 0;
 
     li {
-      font-size: 1.2em;
+      font-size: 14px;
       padding: 4px 4px 4px 16px;
 
       h3 {
@@ -143,6 +152,7 @@ header a {
       }
 
       h4 {
+        font-size: 16px;
         margin: 0;
         padding: 4px 4px 4px 8px;
       }
@@ -150,7 +160,7 @@ header a {
   }
 
   .categoly {
-    text-indent: 1em;
+    text-indent: 10px;
   }
 
   ul {
@@ -159,7 +169,8 @@ header a {
     }
 
     .padd2 {
-      padding-left: 1.5em;
+      padding-left: 10px;
+      white-space: nowrap;
     }
 
     li a {
@@ -173,6 +184,11 @@ header a {
   }
 }
 
+.wrap {
+  white-space: nowrap;
+}
+
+
 #global_nav ul li:hover .dropdown {
   display: block;
   width: 160px;
@@ -180,7 +196,7 @@ header a {
 
 .font1 {
   font-family: MyFont;
-  letter-spacing: 3px;
+  white-space: nowrap;
 }
 
 #global_footer {

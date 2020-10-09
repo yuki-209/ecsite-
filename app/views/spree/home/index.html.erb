@@ -1,6 +1,7 @@
 <%= stylesheet_link_tag    'home' %>
 
 
+
 <% content_for :sidebar do %>
   <div data-hook="homepage_sidebar_navigation">
     <%= render partial: 'spree/shared/taxonomies' %>
@@ -11,7 +12,7 @@
 <div class="flex-list">
     <div class="product-image">
        <%= image_tag 'u.jpg' %>
-       <p>商品名ｓｆｓｄｆｓｄｆｓｄｆｓｄ</p>
+       <p>商品名</p>
        <p>100円</p>
     </div>
     
@@ -57,3 +58,4 @@
   
 </div>
 
+<%= render partial: 'template/footer' %>

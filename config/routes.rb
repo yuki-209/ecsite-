@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  get 'weapon/sword'
+  get 'weapon/rance'
+  get 'weapon/axe'
+  get 'weapon/hammer'
+  get 'weapon/wand'
+  get 'weapon/bow'
+  get 'weapon/armor'
+  get 'weapon/other'
+  get 'weapon/index'
   get 'contacts/sended'
   get 'contacts/new' 
   

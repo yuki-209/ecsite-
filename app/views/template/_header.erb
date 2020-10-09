@@ -31,18 +31,18 @@
               <%= image_tag 'catalog.png',:alt => '商品カタログ' ,:size =>'160x45' %>
           </a>
           <div class="dropdown">
-                <ul>
-                  <li><h3><%= link_to "商品カタログ","/catalog/index" %></h3></li>
-                  <li><h4><a href="catalog/wepons/index.html">武器 <span class="font1">-wepons-</span></a></h4></li>
-                  <li class="categoly"><a href="catalog/wepons/sword/index.html">剣 <span class="font1">-sword-</span></a></li>
-                  <li class="categoly"><a href="catalog/wepons/rance/index.html">槍 <span class="font1">-rance-</span></a></li>
-                  <li class="categoly"><a href="catalog/wepons/axe/index.html">斧 <span class="font1">-axe-</span></a></li>
-                  <li class="categoly"><a href="catalog/wepons/hammer/index.html">槌 <span class="font1">-hammer-</span></a></li>
-                  <li class="categoly"><a href="catalog/wepons/wand/index.html">杖 <span class="font1">-wand-</span></a></li>
-                  <li class="categoly"><a href="catalog/wepons/bow/index.html">弓 <span class="font1">-bow-</span></a></li>
-                  <li><h4><a href="catalog/armor/index.html">防具 <span class="font1">-armor-</span></a></h4></li>
-                  <li><h4><a href="catalog/other/index.html">その他 <span class="font1">-other-</span></a></h4></li>
-                </ul>
+            <ul>
+              <li><h3><%= link_to "商品カタログ","/catalog/index" %></h3></li>
+              <li class="categoly"><%= link_to "武器 -weapons-","/weapon/index" %></li>
+              <li class="categoly"><%= link_to "剣 -sword-","/weapon/sword" %></li>
+              <li class="categoly"><%= link_to "槍 -rance-","/weapon/rance" %></li>
+              <li class="categoly"><%= link_to "斧 -axe-","/weapon/axe" %></li>
+              <li class="categoly"><%= link_to "槌 -hammer-","/weapon/hammer" %></li>
+              <li class="categoly"><%= link_to "杖 -wand-","/weapon/wand" %></li>
+              <li class="categoly"><%= link_to "弓 -bow-","/weapon/bow" %></li>
+              <li class="categoly"><%= link_to "防具 -armor-","/weapon/armor" %></li>     
+              <li class="categoly"><%= link_to "その他 -other-","/weapon/other" %></li>
+            </ul>
           </div>
         </li>
         <li>

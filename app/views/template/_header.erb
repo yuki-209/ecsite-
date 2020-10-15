@@ -7,23 +7,33 @@
     <title>There are potions and weapons ～ポーション有リマス～</title>
   </head> 
   <body>
-  <header id="global_header">
-  <div class="header_inner">
-    <div class="header_logo">
-      <h1>
-        <a href="home.html">
-        </a>
-      </h1>
-    </div>
-    <div class="header_nav">
-      <ul>
-        <li><%= link_to "トップページ","/" %></li>
-        <li><%= link_to "サイトマップ","/sitemap/index" %></li>
-        <li><%= link_to "お問い合わせ先","/contact/index" %></li>
-      </ul>
-    </div>
-  </div>
-</header>
+    <header id="global_header">
+      <div class="header_inner">
+        <div class="header_logo">
+          <h1>
+            <a href="home.html">
+            </a>
+          </h1>
+        </div>
+        <div class="header_nav">
+          <ul>
+            <li><%= link_to t('トップページ'),"/" %></li>
+            <li><%= link_to t('サイトマップ'),"/sitemap/index" %></li>
+            <li><%= link_to t('お問い合わせ先'), 'contacts/new' %></li>
+          </ul>
+          
+     　　<ul>
+        　　<li>
+          　　<% if I18n.locale.to_s == "en" %>
+            　<%= link_to('日本語', :locale => 'ja') %>
+          　<% else %>
+            　<%= link_to('English', :locale => 'en') %>
+          　<% end %>
+        　　</li>
+     　　</ul>
+        </div>
+      </div>
+    </header>
     <nav id="global_nav">
       <ul class="nav">
         <li>
@@ -32,7 +42,7 @@
           </a>
           <div class="dropdown">
             <ul>
-              <li><h3><%= link_to "商品カタログ","/catalog/index" %></h3></li>
+              <li><h3><%= link_to t('商品カタログ'),"/catalog/index" %></h3></li>
               <li class="categoly"><%= link_to "武器 -weapons-","/weapon/index" %></li>
               <li class="categoly"><%= link_to "剣 -sword-","/weapon/sword" %></li>
               <li class="categoly"><%= link_to "槍 -rance-","/weapon/rance" %></li>
@@ -51,7 +61,7 @@
           </a>
           <div class="dropdown">
             <ul>
-              <li class="padd"><h4><%= link_to "ウエポンガイド","/guide/index" %></h4></li>
+              <li class="padd"><h4><%= link_to t('ウエポン・ガイド'),"/guide/index" %></h4></li>
               <li class="categoly padd"><a href="guide/rookie/index.html">かけだし冒険者<br><span class="font1 padd2">-rookie guide-</span></a></li>
               <li class="categoly padd"><a href="guide/handling/index.html">武器の取り扱い<span class="font1 padd2">-handling-</span></a></li>
             </ul>
@@ -63,10 +73,10 @@
           </a>
           <div class="dropdown">
             <ul>
-              <li class="padd"><h4><%= link_to "ユーザーサポート","/support/index" %></h4></li>
-              <li class="padd"><h4><%= link_to "ご利用規約","/kiyaku/index" %></h4></li>
-              <li class="padd"><h4 class="wrap"><%= link_to "プライベートポリシー","/policy/index" %></h4></li>
-              <li class="padd"><h4><%= link_to "サイトマップ","/sitemap/index" %></h4></li>
+              <li class="padd"><h4><%= link_to t('ユーザーサポート'),"/support/index" %></h4></li>
+              <li class="padd"><h4><%= link_to t('ご利用規約'),"/kiyaku/index" %></h4></li>
+              <li class="padd"><h4 class="wrap"><%= link_to t('プライベートポリシー'),"/policy/index" %></h4></li>
+              <li class="padd"><h4><%= link_to t('サイトマップ'),"/sitemap/index" %></h4></li>
             </ul>
           </div>
         </li>

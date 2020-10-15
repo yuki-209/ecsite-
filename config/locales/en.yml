@@ -30,4 +30,11 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  商品カタログ: "Product catalog"
+  ウエポン・ガイド: "Weapon Guide"
+  ユーザーサポート: "User support"
+  ご利用規約: "Terms of Service"
+  プライベートポリシー: "Private policy"
+  サイトマップ: "site map"
+  トップページ: "top page"
+  お問い合わせ先: "Contact"

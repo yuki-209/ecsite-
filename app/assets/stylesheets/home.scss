@@ -5,7 +5,14 @@
     width: 6rem;
     background-color: #FFFFFF;
     text-align: center;
+ 
+ a {  
+    color: #000000;
+    text-decoration: none;
+ }
+ 
 }
+
  .product-image2 {
     border: 1px solid #d9d9db;
     padding: 5px;
@@ -13,7 +20,11 @@
     width: 6rem;
     background-color: #FFFFFF;
     text-align: center;
-}
+ a {  
+    color: #000000;
+    text-decoration: none;
+ }
+ }
 
 .flex-list {
   display: flex;
@@ -68,7 +79,7 @@ body {
 
 header {
   color: rgba(200, 200, 200, 0.8);
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .header_inner {

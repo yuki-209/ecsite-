@@ -9,6 +9,9 @@ gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 # gem 'sqlite3', '~> 1.4.2'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
+#device
+gem 'devise'
+gem 'omniauth-twitter'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 gem 'solidus'
@@ -24,6 +27,8 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'better_errors', '~> 2.8', '>= 2.8.3'
+gem 'awesome_print', '~> 1.8'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

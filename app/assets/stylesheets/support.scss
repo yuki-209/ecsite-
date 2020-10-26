@@ -1,6 +1,10 @@
 // Place all the styles related to the support controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+*,*::before,*::after{
+    box-sizing:boder-box ;    
+}
+
 h4 {
   font-size: 40px;
   margin-top: 15px;
@@ -16,9 +20,8 @@ h4 {
 .main {
   /* border:2px solid #000; */
   text-align: center;
-  width: 800px;
+  width: 610px;
   margin: 0;
-
   /* background-color:#09d; */
 }
 
@@ -33,7 +36,8 @@ ol {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 5px;
-  margin-top: 270px;
+  margin-top: 0;
+  padding-top:270px;
 }
 
 h5 {
@@ -59,37 +63,46 @@ section {}
 .hurou {
   display: flex;
   flex-flow: row;
+  justify-content:center;
 }
 
 .op {
   padding-right: 15px;
   padding-left: 15px;
-  background: url(看板１.png) no-repeat center center scroll white;
+  background: url(/assets/support/看板１.png) no-repeat center center scroll white;
   background-size: 600px;
   height: 565px;
+  /* background-color:#ccc; */
 }
 
 .paint {
-  /* background-image:url(../images/support/看板１.png);
-  background-size:100%; */
+    margin-top:50px;
+/*   background-image:url(/assets/support/看板１.png);
+background-size:100%; */
 }
 
 .emp {
   height: 265px;
-  background: url(../images/support/看板2上.png) no-repeat center center scroll white;
+  background: url(/assets/support/看板2上.png) no-repeat center center scroll white;
   background-size: 600px;
+  /* background-color:#ccc; */
 }
 
 .long {
-  background: url(../images/support/看板2下.png) repeat-y center 0 scroll white;
+  background: url(/assets/support/看板2下.png) repeat-y center 0 scroll white;
   background-size: 600px;
   padding-bottom: 50px;
+  /* background-color:#ccc; */
 }
 
 .question {
   width: 70px;
   height: 50px;
   font-size: 20px;
+}
+
+.minitext{
+    
 }
 
 @media only screen and (max-width: 850px) {
@@ -111,5 +124,9 @@ section {}
 
   .emp {
     height: 264px;
+  }
+  
+  .sabu{
+      width:45%;
   }
 }

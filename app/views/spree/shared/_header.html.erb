@@ -20,17 +20,11 @@
             <li><%= link_to "トップページ","/" %></li>
             <li><%= link_to "サイトマップ","/sitemap/index" %></li>
             <li><%= link_to "お問い合わせ先", 'contacts/new' %></li>
+            <li><%= link_to "新規登録", 'ja/signup' %></li>
+            <li><%= link_to "ログイン", 'ja/login' %></li>
           </ul>
           
-     <ul>
-        <li>
-          <% if I18n.locale.to_s == "en" %>
-            <%= link_to('日本語', :locale => 'ja') %>
-          <% else %>
-            <%= link_to('English', :locale => 'en') %>
-          <% end %>
-        </li>
-      </ul>
+
         </div>
       </div>
     </header>
